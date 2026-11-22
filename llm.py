@@ -12,6 +12,7 @@ class LLMError(RuntimeError):
 
 
 class ChatClient:
+    # 모델 서버 주소와 인증 및 요청 옵션을 설정한다.
     def __init__(
         self,
         base_url: str = config.LLM_BASE_URL,
@@ -26,6 +27,7 @@ class ChatClient:
         self.reasoning_effort = reasoning_effort
         self.timeout = timeout
 
+    # 대화와 도구 명세를 서버에 보내고 모델의 응답 메시지를 반환한다.
     def chat(self, messages: list[dict], tools: list[dict] | None = None) -> dict:
         """Send one chat turn and return the assistant message dict."""
         payload: dict = {"model": self.model, "messages": messages, "temperature": 0}

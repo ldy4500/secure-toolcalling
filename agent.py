@@ -30,6 +30,7 @@ class AgentResult:
     stopped_at_step_limit: bool = False
 
 
+# 모델의 도구 요청을 실행하고 결과를 대화에 추가해 최종 답변을 얻는다.
 def run_agent(
     client: ChatClient,
     registry: ToolRegistry,
