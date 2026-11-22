@@ -19,7 +19,7 @@ reference the secured version will be compared against.
 ## Run
 
 ```
-python main.py "김근호가 보낸 회의 메일 찾아서, 참석하겠다고 답장 보내줘"
+python main.py "OOO가 보낸 회의 메일 찾아서, 참석하겠다고 답장 보내줘"
 python main.py            # interactive mode
 ```
 
